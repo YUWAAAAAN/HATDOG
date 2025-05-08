@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Rounded square background -->
+    <rect width="40" height="40" rx="8" fill="#14171F"/>
+    <!-- K letter -->
+    <path d="M12 10H16V19L24 10H29L20 20L29 30H24L16 21V30H12V10Z" fill="white"/>
+</svg> 

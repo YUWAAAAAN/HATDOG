@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KELO - Creative Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.svg" alt="KELO">
+            <span class="logo-text">KELO</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-right">
+            <button class="icon-btn" id="settings-btn"><i class="fas fa-eye"></i></button>
+            <button class="icon-btn"><i class="fas fa-moon"></i></button>
+            <button class="sign-in">Sign In</button>
+        </div>
+    </nav>
+
+    <!-- Settings Popup -->
+    <div class="settings-popup" id="settings-popup">
+        <div class="settings-content">
+            <div class="settings-item">
+                <div class="settings-label">Theme</div>
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+            <div class="settings-item">
+                <div class="settings-label">Font Size</div>
+                <div class="font-size-control">
+                    <div class="slider-container">
+                        <input type="range" min="50" max="200" value="100" class="font-slider" id="font-slider">
+                    </div>
+                    <span class="zoom-text">100%</span>
+                    <button class="zoom-reset" title="Reset font size">
+                        <i class="fas fa-undo"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Showcase your Creative Work with KELO</h1>
+        <p>Build a stunning portfolio to highlight your skills and projects. Connect with clients<br>and collaborators.</p>
+        <div class="hero-buttons">
+            <button class="primary-btn" id="get-started-btn">Get Started</button>
+            <button class="secondary-btn" id="learn-more-btn">Learn More</button>
+        </div>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-container">
+            <h2>My Portfolio</h2>
+            <p>Explore my latest projects and creative work. Each project represents a unique challenge and solution.</p>
+            
+            <div class="search-filter-container">
+                <div class="search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search projects...">
+                </div>
+                <div class="filter-options">
+                    <div class="category-filters">
+                        <button class="filter-btn active">All</button>
+                        <button class="filter-btn">Web</button>
+                        <button class="filter-btn">Mobile</button>
+                    </div>
+                    <div class="view-options">
+                        <button class="view-btn active" title="Grid View">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button class="view-btn" title="List View">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <button class="filter-menu-btn">
+                        <i class="fas fa-filter"></i>
+                        Filter
+                    </button>
+                </div>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="project-card" data-category="web">
+                    <img src="assets/ecommerce-dashboard.jpg" alt="E-Commerce Website">
+                    <div class="card-content">
+                        <h3>E-Commerce Website</h3>
+                        <p>A fully responsive e-commerce platform with cart functionality and payment integration.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <span><i class="far fa-heart"></i> 87</span>
+                                <span><i class="far fa-eye"></i> 143</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <img src="assets/mobile-banking.jpg" alt="Mobile Banking App">
+                    <div class="card-content">
+                        <h3>Mobile Banking App</h3>
+                        <p>A secure mobile banking application with biometric authentication and real-time transactions.</p>
+                        <div class="tech-stack">
+                            <span>React Native</span>
+                            <span>Flutter</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <span><i class="far fa-heart"></i> 65</span>
+                                <span><i class="far fa-eye"></i> 218</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <img src="assets/portfolio-website.jpg" alt="Portfolio Website">
+                    <div class="card-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A creative portfolio website with smooth animations and interactive elements.</p>
+                        <div class="tech-stack">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>Design</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <span><i class="far fa-heart"></i> 42</span>
+                                <span><i class="far fa-eye"></i> 156</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <img src="assets/social-dashboard.jpg" alt="Social Media Dashboard">
+                    <div class="card-content">
+                        <h3>Social Media Dashboard</h3>
+                        <p>An analytics dashboard for social media management with data visualization.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>D3.js</span>
+                            <span>API Integration</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <span><i class="far fa-heart"></i> 53</span>
+                                <span><i class="far fa-eye"></i> 201</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <img src="assets/fitness-app.jpg" alt="Fitness Tracking App">
+                    <div class="card-content">
+                        <h3>Fitness Tracking App</h3>
+                        <p>A comprehensive fitness tracking application with workout plans and progress monitoring.</p>
+                        <div class="tech-stack">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Health</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <span><i class="far fa-heart"></i> 78</span>
+                                <span><i class="far fa-eye"></i> 289</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <img src="assets/restaurant-booking.jpg" alt="Restaurant Booking System">
+                    <div class="card-content">
+                        <h3>Restaurant Booking System</h3>
+                        <p>An online reservation system for restaurants with table management and notifications.</p>
+                        <div class="tech-stack">
+                            <span>Vue.js</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <span><i class="far fa-heart"></i> 61</span>
+                                <span><i class="far fa-eye"></i> 175</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-actions">
+            <button class="load-more">Load More</button>
+            <button class="view-all">View All Projects</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Have a question or want to work together? Send me a message and I'll get back to you as soon as possible.</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-item-content">
+                        <div class="contact-item-label">Phone</div>
+                        <span>(123) 456-7890</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-item-content">
+                        <div class="contact-item-label">Email</div>
+                        <span>contact@kelo.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form class="contact-form">
+            <h3>Send Message</h3>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="What's this about?">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Tell us what you're thinking about..."></textarea>
+            </div>
+            <button type="submit" class="send-message">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="footer-logo-container">
+                    <img src="assets/logo.svg" alt="KELO">
+                    <span class="footer-logo-text">KELO</span>
+                </div>
+                <p>© 2025 KELO. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>NAVIGATION</h4>
+                    <a href="#">Home</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>SOCIAL</h4>
+                    <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                    <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                    <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                    <a href="#"><i class="fab fa-github"></i>GitHub</a>
+                </div>
+                <div class="footer-section">
+                    <h4>LEGAL</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat-button">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <script>
+        // Settings popup functionality
+        const settingsBtn = document.getElementById('settings-btn');
+        const settingsPopup = document.getElementById('settings-popup');
+        const fontSlider = document.getElementById('font-slider');
+        const zoomText = document.querySelector('.zoom-text');
+
+        // Navigation buttons functionality
+        const getStartedBtn = document.getElementById('get-started-btn');
+        const learnMoreBtn = document.getElementById('learn-more-btn');
+        const portfolioSection = document.getElementById('portfolio');
+        const contactSection = document.getElementById('contact');
+
+        getStartedBtn.addEventListener('click', () => {
+            portfolioSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        learnMoreBtn.addEventListener('click', () => {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Toggle settings popup
+        settingsBtn.addEventListener('click', () => {
+            settingsPopup.classList.toggle('active');
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!settingsPopup.contains(e.target) && !settingsBtn.contains(e.target)) {
+                settingsPopup.classList.remove('active');
+            }
+        });
+
+        // Font size slider functionality
+        fontSlider.addEventListener('input', (e) => {
+            const value = e.target.value;
+            zoomText.textContent = `${value}%`;
+            document.body.style.fontSize = `${value}%`;
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const darkModeBtn = document.querySelector('.nav-right .fa-moon').parentElement;
+        const body = document.body;
+        
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            body.classList.toggle('dark-theme');
+            const isDarkMode = body.classList.contains('dark-theme');
+            
+            // Update both buttons
+            if (isDarkMode) {
+                darkModeBtn.querySelector('i').classList.remove('fa-moon');
+                darkModeBtn.querySelector('i').classList.add('fa-sun');
+                themeToggle.querySelector('i').classList.remove('fa-moon');
+                themeToggle.querySelector('i').classList.add('fa-sun');
+            } else {
+                darkModeBtn.querySelector('i').classList.remove('fa-sun');
+                darkModeBtn.querySelector('i').classList.add('fa-moon');
+                themeToggle.querySelector('i').classList.remove('fa-sun');
+                themeToggle.querySelector('i').classList.add('fa-moon');
+            }
+
+            // Save preference to localStorage
+            localStorage.setItem('darkMode', isDarkMode);
+        }
+
+        // Add click handlers to both buttons
+        themeToggle.addEventListener('click', toggleDarkMode);
+        darkModeBtn.addEventListener('click', toggleDarkMode);
+
+        // Check for saved theme preference
+        const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (savedDarkMode) {
+            toggleDarkMode();
+        }
+
+        // View toggle functionality
+        const viewBtns = document.querySelectorAll('.view-btn');
+        const portfolioGrid = document.querySelector('.portfolio-grid');
+
+        viewBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all view buttons
+                viewBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                // Toggle grid/list/details view
+                if (btn.title === 'List View') {
+                    portfolioGrid.classList.remove('details-view');
+                    portfolioGrid.classList.add('list-view');
+                } else if (btn.title === 'Details View') {
+                    portfolioGrid.classList.remove('list-view');
+                    portfolioGrid.classList.add('details-view');
+                } else {
+                    portfolioGrid.classList.remove('list-view', 'details-view');
+                }
+            });
+        });
+
+        // Portfolio filtering functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const category = btn.textContent.toLowerCase();
+
+                projectCards.forEach(card => {
+                    if (category === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        if (card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
